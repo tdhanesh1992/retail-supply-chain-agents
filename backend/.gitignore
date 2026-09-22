@@ -1,0 +1,18 @@
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environments
+.venv/
+venv/
+env/
+
+# Environment files
+.env
+.env.local
+
+# Databases
+*.sqlite3
+*.db-journal
