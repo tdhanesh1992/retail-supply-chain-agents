@@ -148,32 +148,32 @@ Detailed fleet management tab with battery levels, pallet capacity gauges, and c
 ```mermaid
 flowchart TD
     subgraph UI ["Modern Frontend (Next.js 16 + Vanilla CSS)"]
-        A[Login & Role Selection] --> B[Mission Control Dashboard]
-        A --> FB[Warehouse Floor Board (Restricted To-Do Table)]
-        B --> C[OpenStreetMap Fleet Tracker]
-        B --> D[Human-in-the-Loop Review Gate]
-        B --> E[Multi-Agent Consultation Drawer]
-        B --> SC[Seasonal Demand Analytics Chart]
+        A["Login & Role Selection"] --> B["Mission Control Dashboard"]
+        A --> FB["Warehouse Floor Board (Restricted To-Do Table)"]
+        B --> C["OpenStreetMap Fleet Tracker"]
+        B --> D["Human-in-the-Loop Review Gate"]
+        B --> E["Multi-Agent Consultation Drawer"]
+        B --> SC["Seasonal Demand Analytics Chart"]
     end
 
     subgraph Backend ["Agentic Backend (FastAPI + Python 3.8+)"]
-        F[FastAPI REST API /api]
-        G[Config & Multi-Path .env Loader]
-        H[(SQLite Database via SQLAlchemy)]
+        F["FastAPI REST API /api"]
+        G["Config & Multi-Path .env Loader"]
+        H[("SQLite Database via SQLAlchemy")]
     end
 
     subgraph MultiAgentEngine ["Autonomous Multi-Agent System"]
-        O[AI Orchestrator]
-        S[Seasonal Agent]
-        I[Inventory Agent]
-        L[Logistics Agent]
-        Eco[Sustainability Agent]
-        WH[Warehouse Agent (Floor Dispatcher)]
+        O["AI Orchestrator"]
+        S["Seasonal Agent"]
+        I["Inventory Agent"]
+        L["Logistics Agent"]
+        Eco["Sustainability Agent"]
+        WH["Warehouse Agent (Floor Dispatcher)"]
     end
 
     subgraph ExternalServices ["External Engines"]
-        LLM[Google Gemini 3.6 Flash API]
-        OSM[OpenStreetMap Tile Server]
+        LLM["Google Gemini 3.6 Flash API"]
+        OSM["OpenStreetMap Tile Server"]
     end
 
     UI <-->|JSON REST & Polling| F
